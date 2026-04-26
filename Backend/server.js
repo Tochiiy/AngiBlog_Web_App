@@ -15,8 +15,10 @@ dotenv.config();
 
 const app = express();
 
+// Allow the frontend origin from env in production; fall back to localhost for dev.
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: FRONTEND_URL,
   credentials: true
 }));
 

@@ -1,6 +1,6 @@
 // API helper: functions that call backend endpoints.
-// Keep this file focused on network calls only.
-const BASE_URL = "http://localhost:5000/api";
+// Use the Vite env `VITE_API_URL` in production, fallback to localhost for dev.
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const getAuthHeader = () => ({
   "Content-Type": "application/json",
