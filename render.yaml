@@ -1,0 +1,25 @@
+services:
+  - name: angi-blog-backend
+    type: web_service
+    env: node
+    branch: main
+    buildCommand: "cd Backend && npm install && npm run build || true"
+    startCommand: "cd Backend && npm start"
+    region: oregon
+    envVars:
+      - key: DATABASE_URL
+        fromService: null
+      - key: JWT_SECRET
+      - key: ADMIN_SECRET_KEY
+      - key: EMAIL_USER
+      - key: EMAIL_PASS
+      - key: FRONTEND_URL
+
+  - name: angi-blog-frontend
+    type: static_site
+    branch: main
+    buildCommand: "cd Frontend && npm install && npm run build"
+    publishPath: Frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: "https://angi-blog-backend.onrender.com/api"
