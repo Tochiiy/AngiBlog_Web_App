@@ -1,4 +1,4 @@
-# Suggested Entry-Level Comments (do not modify source files automatically)
+
 
 Below are short, copy-pasteable comments an entry-level developer might add to key files. I did not edit your source files; paste these where you want inline explanations.
 
