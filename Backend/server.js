@@ -18,6 +18,7 @@ const app = express();
 // Allow the frontend origin from env in production; fall back to localhost for dev.
 const allowedOrigins = [
   "http://localhost:5173",
+  "https://angiblog-web-app-2.onrender.com",
   process.env.FRONTEND_URL,
 ].filter(Boolean);
 
