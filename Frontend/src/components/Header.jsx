@@ -98,10 +98,15 @@ const Header = () => {
             Sign in
           </button>
         )}
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-blue-600 transition-colors whitespace-nowrap text-sm flex-shrink-0">
+        <a
+          href="https://www.youtube.com/@tochukwusunday4858"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-blue-600 transition-colors whitespace-nowrap text-sm flex-shrink-0"
+        >
           <IoLogoYoutube className="text-lg" />
-          Subscribe
-        </button>
+          <span>Subscribe</span>
+        </a>
       </div>
     </header>
   );
